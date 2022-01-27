@@ -1,0 +1,273 @@
+body, html {
+  height: 100%;  
+}
+
+body {
+  margin: 0;
+  background-color: #a9b9d1;
+
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: auto;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+header {
+  display: flex;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-weight: bold;
+  margin: 0;  
+}
+
+.day-names {
+  font-size: 20px;
+}
+
+.calendar {  
+  background-color: #ffffff;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(8px, 1fr));
+  border-bottom: 2px solid #e7e7e7;
+  border-left  : 2px solid #e7e7e7;
+}
+
+.borderless {
+  border: 0;
+}
+
+.calendar h5 {
+  margin: 0;
+  padding: 10px;
+  text-align: right;
+  color: #3d3d3d;
+}
+
+.day {
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  border-top: 2px solid #e7e7e7;
+  border-right: 2px solid #e7e7e7;
+  cursor: pointer;
+}
+/*
+.day:hover {
+  background-color: #e7e7e7;
+}*/
+
+.task-day {
+  display: flex;
+  gap: 10px;
+}
+
+.task-day h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.tasks {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.tasks p { 
+  text-align: left;
+  margin: 1px 0px;  
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-form {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.task-form label{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.task-form input[type=text] {
+  font-size: 2rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+}
+
+.task-form > div:nth-child(4) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-form > div:nth-child(5) {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-form button {
+  flex: 1;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.selected-day {
+  background-color: #e9e9e9;
+}
+
+.current-day {
+  color: #e72f2f;
+}
+
+.month {
+  flex: 1;
+}
+
+.nav {
+  flex: 0;
+  display: flex; 
+  align-items: center;
+}
+
+.button svg {
+  width: 18px;
+  height: auto; 
+  display: flex;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button-orange {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #ffae00;
+}
+
+.button-orange:hover {
+  background-color: #ffae00;
+  color: white;
+}
+
+.button-green {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button-green:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button-blue {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button-blue:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button-red {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+
+.button-red:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.button-white {
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.button-white:hover {background-color: #e7e7e7;}
+
+.button-gray {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.button-gray:hover {
+  background-color: #555555;
+  color: white;
+}
+
+.add-button {
+  height: 20px;
+  border-radius: 5px;
+  margin: 2px 0 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  line-height: 100%;
+}
+
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 8px gray;
+}
+
+.error {
+  margin: 0;
+  padding: 5px;
+  color: #e7e7e7;
+  background-color: #eb4a3f;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+input::placeholder{
+  color: #e4e4e4
+}
